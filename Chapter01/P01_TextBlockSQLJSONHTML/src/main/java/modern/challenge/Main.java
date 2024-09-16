@@ -301,7 +301,7 @@ public class Main {
                 "          \"public\".\"employee\".\"last_name\", ?",
                 "   FROM \"public\".\"employee\"",
                 "   WHERE \"public\".\"employee\".\"job_title\" = ?;")
-                .collect(Collectors.joining(String.valueOf("\n")));
+                .collect(Collectors.joining("\n"));
 
         String json7 = Stream.of(
                 "{",
@@ -320,7 +320,7 @@ public class Main {
                 "    }",
                 "  }",
                 "}")
-                .collect(Collectors.joining(String.valueOf("\n")));
+                .collect(Collectors.joining("\n"));
 
         String html7 = Stream.of(
                 "<table>",
@@ -334,7 +334,7 @@ public class Main {
                 "    <td>22</td>",
                 "  </tr>",
                 "<table>")
-                .collect(Collectors.joining(String.valueOf("\n")));
+                .collect(Collectors.joining("\n"));
 
         System.out.println(sql7);
         System.out.println();
