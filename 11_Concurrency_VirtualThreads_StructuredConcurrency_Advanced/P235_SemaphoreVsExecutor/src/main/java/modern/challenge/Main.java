@@ -15,10 +15,7 @@ public class Main {
 
     public static void main(String[] args) throws InterruptedException, ExecutionException {
 
-        System.setProperty("java.util.logging.SimpleFormatter.format",
-                "[%1$tT] [%4$-7s] %5$s %n");
-
-        Runnable task = () -> {
+        System.setProperty("java.util.logging.SimpleFormatter.format",  "[%1$tT] [%4$-7s] %5$s %n");        Runnable task = () -> {
             try {
                 Thread.sleep(5000);
             } catch (InterruptedException ex) { /* handle exception */ }

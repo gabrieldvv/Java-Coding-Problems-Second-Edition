@@ -9,10 +9,7 @@ public class Main {
 
     public static void main(String[] args) throws InterruptedException, ExecutionException {
 
-        System.setProperty("java.util.logging.SimpleFormatter.format",
-                "[%1$tT] [%4$-7s] %5$s %n");
-
-        SignaledObject object = new SignaledObject();
+        System.setProperty("java.util.logging.SimpleFormatter.format",  "[%1$tT] [%4$-7s] %5$s %n");        SignaledObject object = new SignaledObject();
 
         Thread wThread = Thread.ofVirtual().unstarted(() -> {
             try {            

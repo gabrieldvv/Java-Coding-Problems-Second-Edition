@@ -2,21 +2,17 @@ package modern.challenge;
 
 import java.util.logging.Logger;
 
-public class Main {
+public class P211_IntroStartVirtualThreadBuilder {
 
     private static final Logger logger = Logger.getLogger(Main.class.getName());
 
     public static void main(String[] args) throws InterruptedException {
 
-        System.setProperty("java.util.logging.SimpleFormatter.format",
-                "[%1$tT] [%4$-7s] %5$s %n");
-
-        Runnable task = () -> logger.info(Thread.currentThread().toString());
+        System.setProperty("java.util.logging.SimpleFormatter.format",  "[%1$tT] [%4$-7s] %5$s %n");        Runnable task = () -> logger.info(Thread.currentThread().toString());
 
         logger.info("Before running the task ...");
 
-        Thread.Builder builder
-                = Thread.ofVirtual().name("vThread-", 1);
+        Thread.Builder builder = Thread.ofVirtual().name("vThread-", 1);
 
         // name "vThread-1"
         Thread vThread1 = builder.start(task);

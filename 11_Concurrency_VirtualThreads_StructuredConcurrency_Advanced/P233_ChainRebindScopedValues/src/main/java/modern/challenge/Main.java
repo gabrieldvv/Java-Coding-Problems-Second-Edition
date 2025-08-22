@@ -12,10 +12,7 @@ public class Main {
 
     public static void main(String[] args) throws InterruptedException, Exception {
 
-        System.setProperty("java.util.logging.SimpleFormatter.format",
-                "[%1$tT] [%4$-7s] %5$s %n");
-
-        // chaining where() calls
+        System.setProperty("java.util.logging.SimpleFormatter.format",  "[%1$tT] [%4$-7s] %5$s %n");        // chaining where() calls
         Runnable task = () -> {
             logger.info(Thread.currentThread().toString());
             logger.info(() -> SCOPED_VALUE_1.isBound() ? SCOPED_VALUE_1.get() : "Not bound");

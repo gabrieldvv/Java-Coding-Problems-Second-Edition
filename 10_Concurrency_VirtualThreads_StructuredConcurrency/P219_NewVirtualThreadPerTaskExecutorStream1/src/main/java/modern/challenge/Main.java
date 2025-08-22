@@ -15,10 +15,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        System.setProperty("java.util.logging.SimpleFormatter.format",
-                "[%1$tT] [%4$-7s] %5$s %n");
-
-        try (ExecutorService executor = Executors.newVirtualThreadPerTaskExecutor()) {
+        System.setProperty("java.util.logging.SimpleFormatter.format",  "[%1$tT] [%4$-7s] %5$s %n");        try (ExecutorService executor = Executors.newVirtualThreadPerTaskExecutor()) {
 
             List<Future<String>> futures = IntStream.range(0, 10)
                     .mapToObj(i -> executor.submit(() -> {

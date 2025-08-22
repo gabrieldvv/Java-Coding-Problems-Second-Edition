@@ -15,10 +15,7 @@ public class Main {
 
     public static void main(String[] args) throws InterruptedException {
 
-        System.setProperty("java.util.logging.SimpleFormatter.format",
-                "[%1$tT] [%4$-7s] %5$s %n");
-
-        String loc = "124 NW Bobcat L, St. Robert"; // collected from user
+        System.setProperty("java.util.logging.SimpleFormatter.format",  "[%1$tT] [%4$-7s] %5$s %n");        String loc = "124 NW Bobcat L, St. Robert"; // collected from user
         String dest = "129 West 81st Street";       // collected from user
         
         TravelOffer toffer = fetchTravelOffers(loc, dest);

@@ -13,10 +13,7 @@ public class Main {
 
     public static void main(String[] args) throws InterruptedException {
 
-        System.setProperty("java.util.logging.SimpleFormatter.format",
-                "[%1$tT] [%4$-7s] %5$s %n");
-
-        try (ExecutorService executor = Executors.newVirtualThreadPerTaskExecutor()) {
+        System.setProperty("java.util.logging.SimpleFormatter.format",  "[%1$tT] [%4$-7s] %5$s %n");        try (ExecutorService executor = Executors.newVirtualThreadPerTaskExecutor()) {
 
             List<String> results1 = executor.invokeAll(
                     List.of(() -> "pass01", () -> "pass02", () -> "pass03"))

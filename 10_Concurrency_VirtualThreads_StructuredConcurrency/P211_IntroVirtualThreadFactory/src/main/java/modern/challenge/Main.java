@@ -18,10 +18,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        System.setProperty("java.util.logging.SimpleFormatter.format",
-                "[%1$tT] [%4$-7s] %5$s %n");
-
-        Runnable task = () -> logger.info(Thread.currentThread().toString());               
+        System.setProperty("java.util.logging.SimpleFormatter.format",  "[%1$tT] [%4$-7s] %5$s %n");        Runnable task = () -> logger.info(Thread.currentThread().toString());               
         
         // ThreadFactory tfVirtual = Thread.ofVirtual().factory();
         ThreadFactory tfVirtual = Thread.ofVirtual().name("vt-", 0).factory();

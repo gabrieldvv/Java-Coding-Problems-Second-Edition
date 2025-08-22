@@ -23,10 +23,7 @@ public class Main {
 
     public static void main(String[] args) throws InterruptedException, IOException, ExecutionException {
 
-        System.setProperty("java.util.logging.SimpleFormatter.format",
-                "[%1$tT] [%4$-7s] %5$s %n");
-
-        try (ShutdownOnSuccess scope
+        System.setProperty("java.util.logging.SimpleFormatter.format",  "[%1$tT] [%4$-7s] %5$s %n");        try (ShutdownOnSuccess scope
                 = new StructuredTaskScope.ShutdownOnSuccess<String>()) {
 
             Stream.of(1, 2, 3)

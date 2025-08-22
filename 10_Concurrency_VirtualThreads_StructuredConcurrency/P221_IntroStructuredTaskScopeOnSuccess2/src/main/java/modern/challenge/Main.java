@@ -15,10 +15,7 @@ public class Main {
 
     public static void main(String[] args) throws InterruptedException, ExecutionException {
 
-        System.setProperty("java.util.logging.SimpleFormatter.format",
-                "[%1$tT] [%4$-7s] %5$s %n");
-
-        System.out.println(buildTestingTeam());
+        System.setProperty("java.util.logging.SimpleFormatter.format",  "[%1$tT] [%4$-7s] %5$s %n");        System.out.println(buildTestingTeam());
     }
 
     public static TestingTeam buildTestingTeam() throws InterruptedException, ExecutionException {

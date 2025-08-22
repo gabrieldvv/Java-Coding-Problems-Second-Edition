@@ -11,10 +11,7 @@ public class Main {
 
     public static void main(String[] args) throws InterruptedException, ExecutionException {
 
-        System.setProperty("java.util.logging.SimpleFormatter.format",
-                "[%1$tT] [%4$-7s] %5$s %n");
-
-        List<Thread> vtThreads = IntStream.range(0, 5)
+        System.setProperty("java.util.logging.SimpleFormatter.format",  "[%1$tT] [%4$-7s] %5$s %n");        List<Thread> vtThreads = IntStream.range(0, 5)
                 .mapToObj(i -> Thread.ofVirtual().unstarted(() -> {
 
             if (i == 0) { logger.info(Thread.currentThread().toString()); }
